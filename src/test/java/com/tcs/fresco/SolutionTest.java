@@ -1,16 +1,11 @@
   package com.tcs.fresco;
 
-import static junit.framework.Assert.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.*;
 
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 public class SolutionTest extends TestCase{
     Map<Integer, String> customerTag = null;
@@ -24,9 +19,10 @@ public class SolutionTest extends TestCase{
 	}
     
     //Write your test cases here
-    
+    @org.junit.Test
     public void test() {
-    	assertTrue( true );
+      solution.saveCustomer(custId, "Rishabh");
+    	assertTrue( solution.isCustomerExist("Rishabh") );
     }
     
     
